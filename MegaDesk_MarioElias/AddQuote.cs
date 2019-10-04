@@ -15,6 +15,19 @@ namespace MegaDesk_MarioElias
         public AddQuote()
         {
             InitializeComponent();
+           
+        }
+
+        private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //show main menu form
+            var mainMenu = (Form)this.Tag;
+            mainMenu.Show();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -36,12 +36,13 @@
             // 
             // btnAddNewQuote
             // 
-            this.btnAddNewQuote.Location = new System.Drawing.Point(48, 75);
+            this.btnAddNewQuote.Location = new System.Drawing.Point(48, 71);
             this.btnAddNewQuote.Name = "btnAddNewQuote";
             this.btnAddNewQuote.Size = new System.Drawing.Size(394, 81);
             this.btnAddNewQuote.TabIndex = 0;
             this.btnAddNewQuote.Text = "Add New Quote";
             this.btnAddNewQuote.UseVisualStyleBackColor = true;
+            this.btnAddNewQuote.Click += new System.EventHandler(this.BtnAddNewQuote_Click);
             // 
             // btnViewQuotes
             // 
@@ -51,6 +52,7 @@
             this.btnViewQuotes.TabIndex = 1;
             this.btnViewQuotes.Text = "View Quotes";
             this.btnViewQuotes.UseVisualStyleBackColor = true;
+            this.btnViewQuotes.Click += new System.EventHandler(this.BtnViewQuotes_Click);
             // 
             // btnSearchQuote
             // 
@@ -60,6 +62,7 @@
             this.btnSearchQuote.TabIndex = 2;
             this.btnSearchQuote.Text = "Search Quote";
             this.btnSearchQuote.UseVisualStyleBackColor = true;
+            this.btnSearchQuote.Click += new System.EventHandler(this.BtnSearchQuote_Click);
             // 
             // btnExit
             // 
@@ -69,6 +72,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // MainMenu
             // 

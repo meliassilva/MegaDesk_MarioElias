@@ -16,5 +16,32 @@ namespace MegaDesk_MarioElias
         {
             InitializeComponent();
         }
+
+        private void BtnAddNewQuote_Click(object sender, EventArgs e)
+        {
+            // create and show Add Quote form
+            var addQuote = new AddQuote();
+            addQuote.Tag = this;
+            addQuote.Show();
+
+            //hide the main menu form
+            this.Hide();
+           
+        }
+
+        private void BtnViewQuotes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSearchQuote_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
