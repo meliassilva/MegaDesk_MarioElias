@@ -71,10 +71,11 @@
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(550, 120);
+            this.label1.Location = new System.Drawing.Point(420, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(407, 89);
+            this.label1.Size = new System.Drawing.Size(385, 83);
             this.label1.TabIndex = 2;
             this.label1.Text = "Add Quote";
             // 
@@ -241,6 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1567, 1083);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.surfaceMaterial);
