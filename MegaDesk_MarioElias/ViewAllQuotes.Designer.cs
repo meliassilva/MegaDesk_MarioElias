@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(406, 511);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(248, 70);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // ViewAllQuotes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1073, 734);
+            this.Controls.Add(this.btnBack);
+            this.Name = "ViewAllQuotes";
             this.Text = "ViewAllQuotes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewAllQuotes_FormClosed);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnBack;
     }
 }

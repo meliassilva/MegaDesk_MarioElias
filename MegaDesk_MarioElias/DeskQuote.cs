@@ -6,13 +6,22 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_MarioElias
 {
-    public class DeskQuote
+    public struct DeskQuote
     {
+        public enum Delivery
+        {
+            Rush3Days,
+            Rush5Days,
+            Rush7Days,
+            Normal14Days
+        }
+
+
         public string CustomerName { get; set; }
 
         public DateTime QuoteDate { get; set; }
 
-        public string ShippingType { get; set; }
+        public Delivery ShippingType { get; set; }
 
         public decimal QuotePrice { get; set; }
 

@@ -12,9 +12,21 @@ namespace MegaDesk_MarioElias
 {
     public partial class DisplayQuote : Form
     {
-        public DisplayQuote()
+        private Form _mainMenu;
+        public DisplayQuote(Form mainMenu)
         {
             InitializeComponent();
+            _mainMenu = mainMenu;
+        }
+
+        private void DisplayQuote_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _mainMenu.Show();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

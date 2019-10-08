@@ -31,12 +31,19 @@ namespace MegaDesk_MarioElias
 
         private void BtnViewQuotes_Click(object sender, EventArgs e)
         {
+            var viewAllQuotes = new ViewAllQuotes(this);
+            viewAllQuotes.Show();
 
+            this.Hide();
         }
 
         private void BtnSearchQuote_Click(object sender, EventArgs e)
         {
+            var SearchQuote = new SearchQuote(this);
+            SearchQuote.Show();
 
+            //hide the main menu form
+            this.Hide();
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
