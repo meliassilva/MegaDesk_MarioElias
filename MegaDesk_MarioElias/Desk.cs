@@ -8,7 +8,7 @@ namespace MegaDesk_MarioElias
 {
     public struct Desk
     {
-        public enum DesktopMaterial
+        public enum Surface
         {
             Laminate,
             Oak,
@@ -17,11 +17,11 @@ namespace MegaDesk_MarioElias
             Pine
         }
 
-        public float Width { get; set; }
+        public decimal Width { get; set; }
 
-        public float Depth { get; set; }
+        public decimal Depth { get; set; }
 
-        public DesktopMaterial Material { get; set; }
+        public Surface Material { get; set; }
 
         public int NumberOfDrawers { get; set; }
 

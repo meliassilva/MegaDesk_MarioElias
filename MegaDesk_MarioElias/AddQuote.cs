@@ -30,9 +30,43 @@ namespace MegaDesk_MarioElias
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
-        
+
+        private void AddQuoteToFile(DeskQuote deskQuote)
+        {
+            var quotesFile = @"quotes.json";
+            List<DeskQuote> deskQuotes = new List<DeskQuote>();
+
+            //read 
+            if (File.Exists(quotesFile))
+            {
+                using (StreamReader reader = new StreamReader(quotesFile))
+                {
+                    string quotes = reader.ReadToEnd();
+                    if(quotes.Length > 0)
+                    {
+                        //deserialize
+                        deskQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(quotes);
+                    }
+                }
+            }
+            // add a new quote
+            deskQuotes.Add(deskQuote);
+
+            // save the file
+            SaveQuotes(deskQuotes);
+        }
+        private void SaveQuotes(List<DeskQuote>quotes)
+        {
+            var quotesFile = @"quotes.json";
+
+            //serialize
+            var serializedQuotes = JsonConvert.SerializeObject(quotes);
+
+            //write 
+            File.WriteAllText(quotesFile, serializedQuotes);
+        }
 
     }
 }
